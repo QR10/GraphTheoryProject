@@ -2,7 +2,7 @@
 # Classes used in Thomson's Construction.
 
 class State:
-    """A state with one or two edges, all edfes labeled by label. """
+    """A state with one or two edges, all edges labeled by label. """
 
     # Constructor for the class.
     def __init__(self, label=None, edges=[]):
