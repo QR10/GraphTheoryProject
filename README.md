@@ -1,6 +1,6 @@
 # To run this program
 To run this program you will need to install python on your machine. 
-Click [here] (https://www.codecademy.com/articles/install-python) to learn more about python and how to install it on your machine. 
+Click [here](https://www.codecademy.com/articles/install-python) to learn more about python and how to install it on your machine. 
 
 # To test this program 
 1. Type the following on a command line of a machine that has python installed:
@@ -35,19 +35,21 @@ A great solution for this type of problem was the invention of regular expressio
 
 #### Regular expressions
 
-A regular expression also refered to as regex is basically a pattern describing a certain amount of text, it is the key to powerful, flexible and efficient text processing. 
+A regular expression also refered to as regex is basically a pattern describing a certain amount of text, it is the key to powerful, flexible and efficient text processing.
 An example of a simple regular expression (or regex) is the word dog which will match the string 'dog'.
 To further understand more complicated regular expressions, we need to be familiar with regex special characters. These are reserved characters in regex that hold a special meaning and the best way to understand them in my opinion is by examples.
 For instances the character '*' is a quantifier in regex which tells the engine to attempt and match the procesing token once or more times. 
+
 E.g. (regex 'a*' would match an empty string, the string 'a', the string 'aa' and so on...)
+
 The character '.' is an operator that matches any character.
+
 E.g (regex 'a.b' will match any string that follows the patern 'a"any characters"b', it would match a string like 'adb' but not match a string like 'ab' or 'afjb')
 
-Learn more about regular expressions [here] (https://www.regular-expressions.info/)
-See all special characters [here]! (https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+Learn more about regular expressions [here](https://www.regular-expressions.info/)
+See all special characters [here](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)!
 
-Reference [Mastering Regular Expressions] 
-(https://books.google.ie/books?hl=en&lr=&id=P5UXAwAAQBAJ&oi=fnd&pg=PR7&dq=regular+expressions&ots=HBnVe1kmTx&sig=Kf_2Qew1MARswyfbMOlZjqCt7L4&redir_esc=y#v=onepage&q=regular%20expressions&f=false)
+Reference [Mastering Regular Expressions](https://books.google.ie/books?hl=en&lr=&id=P5UXAwAAQBAJ&oi=fnd&pg=PR7&dq=regular+expressions&ots=HBnVe1kmTx&sig=Kf_2Qew1MARswyfbMOlZjqCt7L4&redir_esc=y#v=onepage&q=regular%20expressions&f=false)
 
 #### NFA
 
@@ -56,14 +58,14 @@ Deterministic Finite Automata (DFA)
 Non-deterministic Finite Automata(NFA)
 For this project I am required to use small NFA's to create an overall NFA that will process the regex. NFA are better suited for this problem as even though they are similar to DFA's they will allow us to solve the problem without using as many states as we would use in DFA's and we will also be able to follow epsilon (or null) arrows.
 
-Learn more [here] (https://www.geeksforgeeks.org/introduction-of-finite-automata/)
+Learn more [here](https://www.geeksforgeeks.org/introduction-of-finite-automata/)
 
 ## Shunting Yard Algorithm
 
 When it comes to expressions humans are used to having special characters (or operaters) between the numbers in the expression, for example we write the equation 2+4, which implies that we take the two and add 4 to it. This kind of notation is known as infix notation, it is very intuitive for humans to follow but for machines, not so much. Machines prefer a different kind of notation which allows them to read and process the equations while reading them. For this the postfix notation is used. Postfix indicates that the special characters (or operators) should be placed at the end of the expression rather than between.
 Having this in mind the first step for this project was to convert the infix regex into postfix regex, for this I used a famous algorithm called the shunting yard algorithm.
 
-Learn More [here] (https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
+Learn More [here](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
 
 The implementation of the algorithm was as follows:
 
@@ -72,7 +74,7 @@ Each time a number or operand is read, we push it to the stack.
 Each time an operator comes up, we pop the required operands from the stack, perform the operations, and push the result back to the stack.
 We are finished when there are no tokens (numbers, operators, or any other mathematical symbol) to read. The final number on the stack is the result.
 
-Refer to [Brilliant.org] (https://brilliant.org/wiki/shunting-yard-algorithm/)
+Refer to [Brilliant.org](https://brilliant.org/wiki/shunting-yard-algorithm/)
 
 First, I defined a method that would take in an infix regex and return a postfix regex
 
