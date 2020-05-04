@@ -1,6 +1,8 @@
 # Queli Serrano
 # Classes used in Thomson's Construction.
 
+import argparse
+
 class State:
     """A state with one or two edges, all edges labeled by label. """
 
@@ -160,8 +162,32 @@ def match(regex, s):
     # Ask the NFA if it matches the string s.
     return nfa.accept in current
 
+def Main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument("regex", help="A regular expression for the string to match", type=str)
+	parser.add_argument("strToMatch", help="A string to be compared against the regular expression",\
+	 type=str)
+	group = parser.add_mutually_exclusive_group()
+	group.add_argument("-v", "--verbose", help="Output a verbose version of the result", \
+	action="store_true")
+	group.add_argument("-q", "--quiet", help="Outputs a quiet version of the result",\
+	action="store_true")
+	args = parser.parse_args()
+
+	result = match(args.regex,args.strToMatch)
+	if args.verbose:
+		if result:
+			print("The string "+ str(args.strToMatch)+ " is a match for the regex " + str(args.regex))
+		else:
+			print("The string "+ str(args.strToMatch)+ " does not match the regex " + str(args.regex))
+	elif args.quiet:
+		print(str(result))
+	else:
+		print("Match "+args.strToMatch+ " to "+ args.regex +" = " + str(result))
+
 # If module is runned as a script tests will run 
 if __name__ == "__main__":
+	Main()
 	tests = [
 	   ["a.b|b*", "bbbbb", True],
 	   ["a.b|b*", "bbx", False],
@@ -169,8 +195,9 @@ if __name__ == "__main__":
 	   ["b**", "b", True],
 	   ["b*", "", True]
 	]
-
+	
 	for test in tests:
 		assert match(test[0], test[1]) == test[2], test[0] + \
 		(" should match " if test[2] else " should not match ") + test[1]
+	
 
