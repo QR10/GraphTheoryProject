@@ -1,37 +1,86 @@
-# To run this program
+# Introduction
+
+In world where the amounts of data produced each day is increasing at an extreme rate, it could be really tought to search through those huge amounts of data, especially in an efficient way. A great solution for this type of problem was the invention of regular expressions which makes finding specific words, frases or patterns of text a lot easier.
+A regular expression also refered to as regex is basically a pattern describing a certain amount of text, it is the key to powerful, flexible and efficient text processing. An example of a simple regular expression (or regex) is the word dog which will match the string 'dog'. To further understand more complicated regular expressions, we need to be familiar with regex special characters.
+
+# Run
 To run this program you will need to install python on your machine. 
-Click [here](https://www.codecademy.com/articles/install-python) to learn more about python and how to install it on your machine. 
+Most Linux machines already come with a version of python installed by default, to check if you have python installed on your machine run the following command on a terminal:
 
-# To test this program 
-1. Type the following on a command line of a machine that has python installed:
-```bash
-    python RegularExpressionEngine.py
-```
-* If no errors are displayed on the console the tests have runned correctly
-
-![Sucessfull tests](gifs/working.gif)
-
-* If the console displays errors, the tests have failed to run correctly.
-
-![Failed tests](gifs/notWorking.gif)
-
-2. Import the RegularExpressionEngine.py script into your python program then use the method match from the script and pass it a regex followed by a string to match.
-
-Example: 
-```python
-    match('a.b|b*','bbbbbb')
+```bashz
+    python --version
 ```
 
-# Overview
+If this command did not returned you python's version, you will need to install python on your machine.
 
-Write a program in the Python programming language, that can build a non-deterministic finite automaton (NFA)
-from a regular expression and can use the NFA to check if the regular expression matches any given string of text.
+How to install python on a Linux machine:
+You will be required to type the following sudo command on your terminal:
 
-## Introduction
+```bashz
+    sudo apt install python3.7
+```
+Then run python version to verify that python has installed correctly:
 
-In world where the amounts of data produced each day is increasing at an extreme rate, it could be really tought to search through
-those huge amounts of data, especially in an efficient way. 
-A great solution for this type of problem was the invention of regular expressions which makes finding specific words, frases or patterns of text a lot easier.
+```bashz
+    python3 --version
+```
+or 
+
+```bashz
+    python --version
+```
+
+ If you are running Windows I recommend that you install python through Anaconda, you can find a in depth tutorial by clicking [here](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/). 
+
+Once you have Python installed on your machine, clone the repository, navigate to it's location on a terminal. 
+Example on Linux:
+
+```bashz
+    cd "insert folder name or absolute location here" 
+```
+
+![FolderLocation](/images/cd.png)
+
+Once you have a terminal open in the folder where the python script is located, run the following commands to display help on how to run the program:
+
+1- To verify if you are in the correct folder containing the python script
+```bashz
+    ls
+```
+![ls](/images/ls.png)
+
+or (if configured)
+```bashz
+    ll
+```
+![ll](/images/ll.png)
+
+2-
+```bashz
+    python RegularExpressionEngine.py --help
+```
+![help](/images/help.png)
+
+# Test
+
+For testing my script I used Python's assert statements, I created assert statements for each operator to ensure that the results of the script are accurate. 
+
+To run the tests you simply have to run the script normally, the assert statements will test the program and if any error is found an Assertion Error will be displayed in the console, witht the traceback to line or lines where the error originated.
+
+![AssertError](/images/assertError.png)
+
+If all the tests pass then no errors will be displayed and the script will run normally.
+
+![NoErrors](/images/noError.png)
+
+To add extra tests or remove any current tests, simply open the script on an editor scroll to the assertion statements at the end of the script and add or remove statements.
+
+![AddTests](/images/teste.png)
+
+
+# Algorithm
+
+To understand the algorith we first have to understand regular expressions and NFA.
 
 #### Regular expressions
 
@@ -48,8 +97,6 @@ E.g (regex 'a.b' will match any string that follows the patern 'a"any characters
 
 Learn more about regular expressions [here](https://www.regular-expressions.info/)
 See all special characters [here](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)!
-
-Reference [Mastering Regular Expressions](https://books.google.ie/books?hl=en&lr=&id=P5UXAwAAQBAJ&oi=fnd&pg=PR7&dq=regular+expressions&ots=HBnVe1kmTx&sig=Kf_2Qew1MARswyfbMOlZjqCt7L4&redir_esc=y#v=onepage&q=regular%20expressions&f=false)
 
 #### NFA
 
@@ -313,3 +360,15 @@ I will then loop through the previous states and I will follow the arrows that a
                     followes(state.edges[0], current)
 ```
 Finally, to conclude the method I'll ask the NFA if it matches the string by checking if the nfa accept state is in the current state set and return the answer.
+
+# References
+
+List of references used in this project:
+
+[Mastering Regular Expressions](https://books.google.ie/books?hl=en&lr=&id=P5UXAwAAQBAJ&oi=fnd&pg=PR7&dq=regular+expressions&ots=HBnVe1kmTx&sig=Kf_2Qew1MARswyfbMOlZjqCt7L4&redir_esc=y#v=onepage&q=regular%20expressions&f=false)
+[Python Windows](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/)
+More about Regular Expressions [here](https://www.regular-expressions.info/)
+More about Regular Expressions [here](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+NFA's [here](https://www.geeksforgeeks.org/introduction-of-finite-automata/)
+Shunting Yard Algorithm [here](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
+More about Shunting Yard Algorithm [Brilliant.org](https://brilliant.org/wiki/shunting-yard-algorithm/)
