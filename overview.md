@@ -1,6 +1,6 @@
 # Introduction
 
-In world where the amounts of data produced each day is increasing at an extreme rate, it could be really tought to search through those huge amounts of data, especially in an efficient way. A great solution for this type of problem was the invention of regular expressions which makes finding specific words, frases or patterns of text a lot easier.
+In a world where the amounts of data produced each day is increasing at an extreme rate, it could be really tought to search through those huge amounts of data, especially in an efficient way. A great solution for this type of problem was the invention of regular expressions which makes finding specific words, frases or patterns of text a lot easier.
 A regular expression also refered to as regex is basically a pattern describing a certain amount of text, it is the key to powerful, flexible and efficient text processing. An example of a simple regular expression (or regex) is the word dog which will match the string 'dog'. To further understand more complicated regular expressions, we need to be familiar with regex special characters. In this program we will be looking to develop an algorithm that is able to match a given strings to a given regex through the use of NFA's, to learn more [click here](#algorithm) to jump to the algorithm section.
 
 # Run
