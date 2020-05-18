@@ -1,7 +1,7 @@
 # Introduction
 
 In world where the amounts of data produced each day is increasing at an extreme rate, it could be really tought to search through those huge amounts of data, especially in an efficient way. A great solution for this type of problem was the invention of regular expressions which makes finding specific words, frases or patterns of text a lot easier.
-A regular expression also refered to as regex is basically a pattern describing a certain amount of text, it is the key to powerful, flexible and efficient text processing. An example of a simple regular expression (or regex) is the word dog which will match the string 'dog'. To further understand more complicated regular expressions, we need to be familiar with regex special characters.
+A regular expression also refered to as regex is basically a pattern describing a certain amount of text, it is the key to powerful, flexible and efficient text processing. An example of a simple regular expression (or regex) is the word dog which will match the string 'dog'. To further understand more complicated regular expressions, we need to be familiar with regex special characters. In this program we will be looking to develop an algorithm that is able to match a given strings to a given regex through the use of NFA's, to learn more [click here](#algorithm) to jump to the algorithm section.
 
 # Run
 To run this program you will need to install python on your machine. 
@@ -365,10 +365,10 @@ Finally, to conclude the method I'll ask the NFA if it matches the string by che
 
 List of references used in this project:
 
-[Mastering Regular Expressions](https://books.google.ie/books?hl=en&lr=&id=P5UXAwAAQBAJ&oi=fnd&pg=PR7&dq=regular+expressions&ots=HBnVe1kmTx&sig=Kf_2Qew1MARswyfbMOlZjqCt7L4&redir_esc=y#v=onepage&q=regular%20expressions&f=false)
-[Python Windows](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/)
-More about Regular Expressions [here](https://www.regular-expressions.info/)
-More about Regular Expressions [here](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
-NFA's [here](https://www.geeksforgeeks.org/introduction-of-finite-automata/)
-Shunting Yard Algorithm [here](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
-More about Shunting Yard Algorithm [Brilliant.org](https://brilliant.org/wiki/shunting-yard-algorithm/)
+* [Mastering Regular Expressions](https://books.google.ie/books?hl=en&lr=&id=P5UXAwAAQBAJ&oi=fnd&pg=PR7&dq=regular+expressions&ots=HBnVe1kmTx&sig=Kf_2Qew1MARswyfbMOlZjqCt7L4&redir_esc=y#v=onepage&q=regular%20expressions&f=false)
+* [Python Windows](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/)
+* More about Regular Expressions [here](https://www.regular-expressions.info/)
+* More about Regular Expressions [here](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+* NFA's [here](https://www.geeksforgeeks.org/introduction-of-finite-automata/)
+* Shunting Yard Algorithm [here](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
+* More about Shunting Yard Algorithm [Brilliant.org](https://brilliant.org/wiki/shunting-yard-algorithm/)
