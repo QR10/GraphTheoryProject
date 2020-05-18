@@ -192,12 +192,14 @@ if __name__ == "__main__":
 	   ["a.b|b*", "bbbbb", True],
 	   ["a.b|b*", "bbx", False],
 	   ["a.b", "ab", True],
+	   ["a.b", "ax", False], 
 	   ["b**", "b", True],
+	   ["b**", "x", False],
 	   ["b*", "", True]
 	]
 	
 	for test in tests:
 		assert match(test[0], test[1]) == test[2], test[0] + \
-		(" should match " if test[2] else " should not match ") + test[1]
+		(" should match " if test[2] else " regex should not match the string") + test[1]
 	
 
